@@ -1,0 +1,21 @@
+getgenv().aimbot_loaded = false
+tab:Button({
+    Title = "Load Aimbot",
+    Callback = function()
+        if not getgenv().aimbot_loaded then
+            loadstring(game:HttpGet("", true))()
+            getgenv().aimbot_loaded = true
+        end
+        
+    end
+})
+
+getgenv().esp_loaded = false
+tab:Button({
+    Title = "Load ESP",
+    Callback = function()
+        if not getgenv().esp_loaded then
+            loadstring(game:HttpGet("", true))()
+            getgenv().esp_loaded = true
+        end
+    end
